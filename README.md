@@ -3,10 +3,9 @@
 This repository contains a Flutter-based implementation of an Omegle clone, allowing users to randomly connect with others for video and text chats. The application leverages WebRTC for peer-to-peer video communication, along with Socket.IO for real-time messaging and room management.
 
 ## Features
-- Random video and text chat with other users.
+- Random video chat with other users.
 - Toggle video and audio streams.
 - Search for new partners with a single click.
-- Display online user count.
 
 ## Technical Stack
 - **Flutter**: Frontend framework.
