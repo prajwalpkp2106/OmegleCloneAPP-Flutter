@@ -26,7 +26,7 @@ This repository contains a Flutter-based implementation of an Omegle clone, allo
     flutter pub get
     ```
 
-3. **Run the application**:
+3. **Run the application on emulators or mobile devices**:
     ```bash
     flutter run
     ```
@@ -34,8 +34,10 @@ This repository contains a Flutter-based implementation of an Omegle clone, allo
 ## Live Server
 The application connects to a live backend server hosted at [https://omegleclone.onrender.com](https://omegleclone.onrender.com). This server handles the WebSocket connections and room management required for the random chat functionality.
 
-## Screenshots
-Add some screenshots of your application here.
+## App Insights
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+### Challenge: Add Messaging Feature
+Feeling up for a challenge? Enhance the app by adding a messaging feature alongside video chat! You can use the existing WebSocket setup for this purpose. Fork the repository and show us your skills by implementing a seamless text messaging feature integrated with the current video chat functionality. Happy coding!
