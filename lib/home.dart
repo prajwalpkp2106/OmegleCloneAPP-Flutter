@@ -12,13 +12,12 @@ class Omegle extends StatefulWidget {
 }
 
 class _OmegleState extends State<Omegle> {
-  // States for video, audio, socket connection, and messages
+  // States for video, audio,and socket connection
   bool video = true;
   bool audio = true;
   bool socketStatus = false;
   String UserConnectionMsg = "Not Connected";
   io.Socket? socket;
-  List<Widget> messages = [];
 
   // Controllers and renderers for handling peer connection and video streams
   final TextEditingController _msgController = TextEditingController();
@@ -101,11 +100,6 @@ class _OmegleState extends State<Omegle> {
       });
       _getUsersMedia(audio, video);
       socket!.emit('join', peerID);
-    });
-    socket!.on('chat message', (msg) {
-      setState(() {
-        messages.add(strangerMsg(msg));
-      });
     });
 
     socket!.on('dc', (msg) async {
@@ -201,50 +195,6 @@ class _OmegleState extends State<Omegle> {
       });
     } catch (e) {
       debugPrint(e.toString());
-    }
-  }
-
-  /// Widget for displaying server messages
-  Widget serverMsg(String msg) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Text(
-        "Server : $msg",
-        style: const TextStyle(color: Colors.black),
-      ),
-    );
-  }
-
-  /// Widget for displaying stranger messages
-  Widget strangerMsg(String msg) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.blueGrey,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Text(
-        "stranger : $msg",
-        style: const TextStyle(color: Colors.white),
-      ),
-    );
-  }
-
-  /// Send a message
-  void sendMessage() {
-    if (_msgController.text.isNotEmpty) {
-      final msg = _msgController.text;
-      _msgController.clear();
-      setState(() {
-        messages.add(serverMsg(msg));
-      });
-      socket!.emit('chat message', msg);
     }
   }
 
