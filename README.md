@@ -32,7 +32,7 @@ This repository contains a Flutter-based implementation of an Omegle clone, allo
     ```
 
 ## Live Server
-The application connects to a live backend server hosted at [https://omegleclone.onrender.com](https://omegleclone.onrender.com). This server handles the WebSocket connections and room management required for the random chat functionality.
+The application connects to a live backend server hosted at https://omegleclone.onrender.com. This server handles the WebSocket connections and room management required for the random chat functionality.
 
 ## App Insights
 
