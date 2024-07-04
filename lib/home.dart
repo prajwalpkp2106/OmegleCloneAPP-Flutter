@@ -312,7 +312,7 @@ class _OmegleState extends State<Omegle> {
 
   /// Section for displaying local and remote video streams
   SizedBox VideoRenderers() => SizedBox(
-        height: MediaQuery.of(context).size.height * 0.85,
+        height: MediaQuery.of(context).size.height * 0.9,
         child: Column(
           children: [
             Flexible(
