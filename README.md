@@ -36,6 +36,7 @@ The application connects to a live backend server hosted at https://omegleclone.
 
 ## App Insights
 
+
 ### Challenge: Add Messaging Feature
 Feeling up for a challenge? Enhance the app by adding a messaging feature alongside video chat! You can use the existing WebSocket setup for this purpose. Fork the repository and show us your skills by implementing a seamless text messaging feature integrated with the current video chat functionality.
 ## Contributing
